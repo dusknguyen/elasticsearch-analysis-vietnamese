@@ -117,6 +117,11 @@ Make sure you have installed both Docker & docker-compose
 ```sh
 # Copy, edit ES version and password for user elastic in file .env. Default password: changeme
 cp .env.sample .env
+
+# Give everything permission to data/ folder
+mkdir data/
+sudo chmod a+rw data/
+
 docker compose build
 docker compose up
 ```
